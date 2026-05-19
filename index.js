@@ -91,8 +91,9 @@ document.getElementById('easy').addEventListener('click', async() => {
   currentDifficulty = 20
   document.getElementById("timer").textContent = "Time: " + currentDifficulty;
   limit = 3;
+  clickCount = 0;
+  document.getElementById('click').textContent = "Clicks: " + clickCount;
   await loadPokemon(3);
-
 });
 //normal
 document.getElementById('normal').addEventListener('click', async() => {
@@ -105,6 +106,8 @@ document.getElementById('normal').addEventListener('click', async() => {
   currentDifficulty = 45
   document.getElementById("timer").textContent = "Time: " + currentDifficulty;
   limit = 6;
+  clickCount = 0;
+  document.getElementById('click').textContent = "Clicks: " + clickCount;
   await loadPokemon(6);
 });
 //hard
@@ -118,6 +121,8 @@ document.getElementById('hard').addEventListener('click', async() => {
   currentDifficulty = 60
   document.getElementById("timer").textContent = "Time: " + currentDifficulty;
   limit = 10;
+  clickCount = 0;
+  document.getElementById('click').textContent = "Clicks: " + clickCount;
   await loadPokemon(10);
 });
 
@@ -140,8 +145,10 @@ document.getElementById('reset').addEventListener('click', async() => {
   clearInterval(timerInterval);
   resetBoard();
   await loadPokemon(limit);
-  timeLeft = 0;
+  timeLeft = currentDifficulty;
   document.getElementById("timer").textContent = "Time: " + timeLeft;
+  clickCount = 0;
+  document.getElementById('click').textContent = "Clicks: " + clickCount;
 });
 
 document.getElementById('stop').addEventListener('click', () => {
