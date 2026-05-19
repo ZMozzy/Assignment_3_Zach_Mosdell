@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="index.js"></script> -->
+</head>
+
+<body>
+
+
+  <div class="game-aspects">
+    <div class="theme">
+      <label class="switch">
+    <input type="checkbox" id="darkToggle">
+    <span class="slider"></span>
+</label>
+</div>
+    <div class="stats">
+      <p><b id="timer">Time: 00</b></p>
+      <p><b id="matches">Matches: 0/0</b></p>
+      <p><b id="click">Clicks: 0</b></p>
+    </div>
+    <!-- <button id="easy">Easy</button> -->
+    <!-- <button id="normal">Normal</button> -->
+    <!-- <button id="hard">Hard</button> -->
+    <div class="difficulty-buttons">
+      <button id="easy">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> Easy
+        </span>
+      </button>
+      
+      <button id="normal">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> Normal
+        </span>
+      </button>
+      
+      <button id="hard">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> Hard
+        </span>
+      </button>
+    </div>
+    <div class="game-buttons">
+      <button id="start">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> Start
+        </span>
+      </button>
+
+      <button id="reset">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> Reset
+        </span>
+      </button>
+
+      <button id="stop">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> Stop
+        </span>
+      </button>
+    </div>
+    <div class="power-button">
+      <button id="seer">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> All Knowing
+        </span>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="game_grid">
+    <div id="win">
+      You Win
+    </div>
+    <div id="lose">
+      You Lose
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+    <div class="card">
+      <img class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+
+
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
