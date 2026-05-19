@@ -18,7 +18,10 @@ function setup() {
   $(".card").on(("click"), function () {
     //doesn't let user spam
     if (lockBoard) return;
-    $(this).toggleClass("flip");
+    if ($(this).hasClass("flip") || $(this).hasClass("matched")) return;
+
+    $(this).addClass("flip");
+    if ($(this).is(firstCard)) return;
 
     if (!firstCard) {
       firstCard = $(this);
@@ -62,8 +65,8 @@ function setup() {
         lockBoard = true;
         //flips cards back over
         setTimeout(() => {
-          firstCard.toggleClass("flip")
-          secondCard.toggleClass("flip")
+          firstCard.removeClass("flip")
+          secondCard.removeClass("flip")
           //resets values
           firstCard = null;
           secondCard = null;
@@ -137,7 +140,8 @@ document.getElementById('reset').addEventListener('click', async() => {
   clearInterval(timerInterval);
   resetBoard();
   await loadPokemon(limit);
-  startTimer(currentDifficulty);
+  timeLeft = 0;
+  document.getElementById("timer").textContent = "Time: " + timeLeft;
 });
 
 document.getElementById('stop').addEventListener('click', () => {
@@ -165,7 +169,6 @@ function resetBoard() {
     "Matches: " + matches + "/" + totalPairs;
 
   setup();
-  lockBoard = false;
 
 }
 
